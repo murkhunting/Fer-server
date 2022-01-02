@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const ProjectSchema = new mongoose.Schema({
-  video: { type: Boolean, default: true },
+  type: { type: String, required: true },
   titulo: { type: String, required: true, unique: true },
-  descripcion: { type: String, required: true },
+  desc: { type: String, required: true },
   byn: { type: String, required: true },
   gif: { type: String, required: true },
   links: [{ type: String }],
