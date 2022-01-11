@@ -2,6 +2,7 @@ express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+var cors = require("cors");
 
 const authRoute = require("./routes/auth");
 const projectRoute = require("./routes/project");
@@ -17,6 +18,7 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use(express.json());
+app.use(cors());
 
 app.use("/api/auth", authRoute);
 app.use("/api/project", projectRoute);

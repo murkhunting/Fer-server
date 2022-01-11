@@ -55,7 +55,7 @@ router.get("/random", async (req, res) => {
   let projects = [];
 
   try {
-    projects = await Project.aggregate([{ $sample: { size: 9 } }]);
+    projects = await Project.aggregate([{ $sample: { size: 12 } }]);
     res.status(200).json(projects);
   } catch (err) {
     res.status(500).json(err);
