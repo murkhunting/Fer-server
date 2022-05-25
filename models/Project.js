@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const ProjectSchema = new mongoose.Schema({
   type: { type: String, required: true },
+  architecture: { type: Boolean, required: true },
   titulo: { type: String, required: true, unique: true },
   desc: { type: String, required: true },
   year: { type: String, required: true },
