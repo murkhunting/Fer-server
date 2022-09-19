@@ -23,6 +23,6 @@ app.use(cors());
 app.use("/api/auth", authRoute);
 app.use("/api/project", projectRoute);
 
-app.listen(8800, () => {
+app.listen(8000, () => {
   console.log("Backend server is running!");
 });
